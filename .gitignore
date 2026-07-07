@@ -1,0 +1,50 @@
+# =============================================================
+# .gitignore - terraform-dreamsquad-lab
+# =============================================================
+
+# State files - CRITICO: contem dados sensiveis da infraestrutura
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate
+*.tfstate.backup
+
+# Diretorio de trabalho do Terraform
+.terraform/
+.terraform.lock.hcl
+
+# Variaveis com valores reais - NUNCA commitar
+terraform.tfvars
+*.auto.tfvars
+
+# Planos gerados (podem conter dados sensiveis)
+*.tfplan
+plan.out
+
+# Variaveis de ambiente e segredos
+.env
+.env.*
+*.env
+credentials
+.aws/
+
+# Logs e temporarios
+*.log
+logs/
+*.tmp
+*.bak
+
+# Crash logs do Terraform
+crash.log
+crash.*.log
+
+# Override files (uso local, nao compartilhar)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Editores
+.vscode/
+.idea/
+*.DS_Store
+Thumbs.db
