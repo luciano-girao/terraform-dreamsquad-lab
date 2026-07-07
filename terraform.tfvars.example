@@ -1,0 +1,31 @@
+# =============================================================
+# terraform.tfvars.example
+# terraform-dreamsquad-lab
+#
+# INSTRUCOES:
+# 1. Copie este arquivo: cp terraform.tfvars.example terraform.tfvars
+# 2. Preencha os valores reais no arquivo terraform.tfvars
+# 3. NUNCA commite o terraform.tfvars (ja esta no .gitignore)
+# =============================================================
+
+# Regiao AWS onde os recursos serao provisionados
+aws_region = "us-east-1"
+
+# Nome do projeto (usado em tags e nomes de recursos)
+project_name = "dreamsquad-lab"
+
+# Ambiente (dev, staging, prod)
+environment = "dev"
+
+# Tipo da instancia EC2
+instance_type = "t2.micro"
+
+# Nome do Key Pair para acesso SSH (deve existir na conta AWS)
+# Crie em: EC2 > Key Pairs > Create key pair
+key_name = "meu-keypair"
+
+# CIDR da VPC principal
+vpc_cidr = "10.0.0.0/16"
+
+# CIDR da subnet publica
+subnet_cidr = "10.0.1.0/24"
